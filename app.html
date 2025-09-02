@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Página mínima · 3 apartados</title>
+  <meta name="description" content="Ejemplo de página pequeña con 3 apartados en HTML, CSS y JS." />
+
+  <!-- Enlace al archivo de estilos -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <!-- Barra superior -->
+  <header>
+    <div class="container topbar">
+      <div class="brand" aria-label="Marca">
+        <div class="logo" aria-hidden="true"></div>
+        <span>Mini Sitio</span>
+      </div>
+      <nav aria-label="Secciones principales">
+        <ul>
+          <li><a href="#inicio" data-nav>Inicio</a></li>
+          <li><a href="#servicios" data-nav>Servicios</a></li>
+          <li><a href="#contacto" data-nav>Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="controls">
+        <button id="themeBtn" class="btn" type="button" aria-pressed="false" title="Alternar tema">🌗 Tema</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- Hero / Inicio -->
+    <section id="inicio" class="hero section">
+      <div class="container grid">
+        <div>
+          <h1>Plantilla mínima con <span style="color:var(--brand)">3 apartados</span></h1>
+          <p class="muted">Estructura básica y moderna en HTML, estilos con CSS y una pizca de JavaScript para mejorar la experiencia.</p>
+          <div class="inline">
+            <a class="btn" href="#servicios">Ver servicios</a>
+            <a class="btn" href="#contacto" style="background:color-mix(in oklab, var(--brand-2), var(--surface) 55%)">Contactar</a>
+          </div>
+        </div>
+        <div class="card" role="img" aria-label="Tarjeta decorativa">
+          <p><strong>Listo para copiar y usar.</strong> Incluye navegación con estado activo, botón de tema y formulario accesible.</p>
+          <ul>
+            <li>Semántica HTML5</li>
+            <li>Diseño responsivo</li>
+            <li>Sin dependencias externas</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="section">
+      <div class="container">
+        <h2>Servicios</h2>
+        <p class="muted">Ejemplos de tarjetas para mostrar funcionalidades o puntos clave.</p>
+        <div class="features">
+          <article class="feature">
+            <h3>Diseño limpio</h3>
+            <p>Estructura clara, tipografía legible y uso de variables CSS para temas.</p>
+          </article>
+          <article class="feature">
+            <h3>Navegación activa</h3>
+            <p>El enlace de navegación se resalta según la sección visible.</p>
+          </article>
+          <article class="feature">
+            <h3>Formulario accesible</h3>
+            <p>Etiquetas asociadas, validación nativa y manejo simple con JavaScript.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="section">
+      <div class="container">
+        <h2>Contacto</h2>
+        <p class="muted">Ejemplo de formulario funcional sin backend (muestra un mensaje de éxito).</p>
+        <form id="contactForm" novalidate>
+          <div>
+            <label for="nombre">Nombre</label>
+            <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required />
+          </div>
+          <div class="inline">
+            <div style="flex:1">
+              <label for="email">Correo</label>
+              <input id="email" name="email" type="email" placeholder="tucorreo@ejemplo.com" required />
+            </div>
+            <div style="flex:1">
+              <label for="telefono">Teléfono (opcional)</label>
+              <input id="telefono" name="telefono" type="tel" placeholder="(+57) 300 000 0000" />
+            </div>
+          </div>
+          <div>
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" placeholder="¿Cómo puedo ayudarte?" required></textarea>
+          </div>
+          <div class="inline">
+            <button class="btn" type="submit">Enviar</button>
+            <button class="btn" type="reset" style="background:color-mix(in oklab, var(--brand-2), var(--surface) 55%)">Limpiar</button>
+          </div>
+          <p id="formMsg" class="muted" role="status" aria-live="polite" style="margin:.25rem 0 0"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container foot">
+      <span>© <span id="year"></span> Mini Sitio</span>
+      <a href="#inicio" class="btn" title="Volver arriba">↑ Arriba</a>
+    </div>
+  </footer>
+
+  <!-- Enlace al archivo JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>
