@@ -99,7 +99,8 @@
           </div>
           <div>
             <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" name="mensaje" placeholder="¿Cómo puedo ayudarte?" required></textarea>
+            <textarea id="mensaje" name="mensaje" placeholder="¿Cómo puedo ayudarte?" required maxlength="500"></textarea>
+            <p id="charCount" class="muted char-count">0/500</p>
           </div>
           <div class="inline">
             <button class="btn" type="submit">Enviar</button>
@@ -117,6 +118,8 @@
       <a href="#inicio" class="btn" title="Volver arriba">↑ Arriba</a>
     </div>
   </footer>
+
+  <button id="toTop" class="btn to-top" type="button" aria-label="Volver arriba">↑</button>
 
   <!-- Enlace al archivo JavaScript -->
   <script src="app.js"></script>

@@ -99,10 +99,23 @@ label { font-weight: 600; }
 input, textarea { width: 100%; padding: .7rem .8rem; border-radius: .6rem; border: 1px solid color-mix(in oklab, var(--text), transparent 85%); background: var(--surface); color: var(--text); }
 textarea { min-height: 120px; resize: vertical; }
 .inline { display:flex; gap: .75rem; }
+.char-count { margin:.25rem 0 0; text-align:right; font-size:.875rem; }
 
 /* Footer */
 footer { padding: 2rem 0 3rem; border-top: 1px solid color-mix(in oklab, var(--text), transparent 88%); margin-top: 2rem; }
 .foot { display:flex; flex-wrap: wrap; gap: .75rem; justify-content: space-between; align-items:center; color: var(--muted); }
+.to-top {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s;
+}
+.to-top.show {
+  opacity: 1;
+  pointer-events: auto;
+}
 
 /* ====== Responsivo ====== */
 @media (max-width: 860px){ .hero .grid { grid-template-columns: 1fr; } }

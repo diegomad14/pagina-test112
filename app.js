@@ -70,3 +70,25 @@ const name = (data.nombre || '');
 $('#formMsg').textContent = `¡Gracias${name ? ', ' + name : ''}! Tu mensaje ha sido enviado (simulado).`;
 form.reset();
 });
+
+// ====== Contador de caracteres ======
+const msg = $('#mensaje');
+const charCount = $('#charCount');
+if (msg && charCount) {
+const max = msg.getAttribute('maxlength');
+charCount.textContent = `0/${max}`;
+msg.addEventListener('input', () => {
+charCount.textContent = `${msg.value.length}/${max}`;
+});
+}
+
+// ====== Botón volver arriba ======
+const toTop = $('#toTop');
+if (toTop) {
+window.addEventListener('scroll', () => {
+toTop.classList.toggle('show', window.scrollY > 300);
+});
+toTop.addEventListener('click', () => {
+window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+}
